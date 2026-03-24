@@ -42,6 +42,25 @@ Notes:
 - On first run, the app downloads and prepares the dataset automatically.
 - First launch can take longer because the embedding model is downloaded.
 
+## Run in Dev Container
+
+This repository includes a VS Code Dev Container config in `.devcontainer/devcontainer.json`.
+The container is built from `.devcontainer/Dockerfile` and includes:
+- Python 3.11
+- project dependencies from `requirements.txt`
+- OpenAI Codex CLI (`codex`)
+
+### Steps
+1. Open the project in VS Code.
+2. Run `Dev Containers: Reopen in Container`.
+3. Wait until dependencies are installed automatically from `requirements.txt`.
+4. Start the app inside the container:
+```bash
+streamlit run app.py
+```
+5. Open the forwarded Streamlit port (`8501`) from VS Code when prompted.
+
+
 ## Deploy on Streamlit Community Cloud
 
 1. Push this project to a GitHub repository.
